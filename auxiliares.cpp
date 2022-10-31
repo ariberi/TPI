@@ -107,7 +107,11 @@ bool es121Vertical(pos p, jugadas& j, tablero& t){
     return res;
 }
 
+bool esPosicionSinJugarYSinBanderita(tablero& t, jugadas& j, banderitas& b, pos p){
 
+    return (posicionValida(t,p) && not posicionTieneBanderita(b,p) && not posicionJugada(j,p));
+
+}
 
 
 
