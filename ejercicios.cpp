@@ -94,21 +94,24 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
     bool posJugada = posicionJugada(j,p);
     bool posBanderita = posicionTieneBanderita(b,p);
 
-    if ( not posJugada && not posBanderita && t[p.first][p.second] == cVACIA){
+    if ( not posJugada && not posBanderita /* && t[p.first][p.second] == cVACIA */ ){
 
         int cantidadMinasAdyacentes = minasAdyacentes(t,p);
         j.push_back(make_pair(p, cantidadMinasAdyacentes));
 
-        if (cantidadMinasAdyacentes == 0){
-            for(int fila = -1; fila<=1; fila++){
-                for(int col = -1; col <=1; col++){
-                    if (adyacenteValida(t,p, fila, col)){
-                        pos q = make_pair(p.first+fila, p.second+col);
-                        jugarPlus(t, b, q, j);
+        if (t[p.first][p.second] == cVACIA){
+            if (cantidadMinasAdyacentes == 0){
+                for(int fila = -1; fila<=1; fila++){
+                    for(int col = -1; col <=1; col++){
+                        if (adyacenteValida(t,p, fila, col)){
+                            pos q = make_pair(p.first+fila, p.second+col);
+                            jugarPlus(t, b, q, j);
+                        }
                     }
                 }
             }
         }
+
     }
 }
 
