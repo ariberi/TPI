@@ -120,7 +120,7 @@ bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
         for (int k = 0; k < t[0].size(); k++){
 
             pos q = make_pair(i,k);
-            if (t[i][k] == cVACIA && posicionValida(t,q) && not posicionTieneBanderita(b,q) && not posicionJugada(j,q) && esAdyacente121(q, j, t)){
+            if (t[i][k] == cVACIA && esPosicionSinJugarYSinBanderita(t,j,b,q) && esAdyacente121(q, j, t)){
                 p = q;
                 j.push_back(make_pair(p, minasAdyacentes(t,p)));
                 hay = true;
