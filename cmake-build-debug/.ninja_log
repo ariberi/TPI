@@ -1,2 +1,26 @@
 # ninja log v5
 3286	3813	6887746885886253	untitled.exe	bf71cb2de37537f8
+16	2577	6890207779291923	build.ninja	149dc05885efa9ea
+108	10089	6890207974261420	CMakeFiles/tpi2.dir/auxiliares.obj	6b6a20f15a735cbe
+68	11543	6890207989231927	CMakeFiles/tpi2.dir/ejercicios.obj	4338e4e5c9ed1c0c
+3	12989	6890208003778626	CMakeFiles/tpi2.dir/main.obj	b3082031ee309d29
+325	15425	6890208028203069	CMakeFiles/tpi2.dir/tests/cambiarBanderitaTEST.obj	5e1ce54e1bcd5a8a
+154	15475	6890208028271083	CMakeFiles/tpi2.dir/tests/perdioTEST.obj	db113f064973858
+342	17717	6890208051112819	CMakeFiles/tpi2.dir/tests/ganoTEST.obj	a180256c5179e9aa
+10095	18546	6890208059507178	CMakeFiles/tpi2.dir/tests/minasAdyacentesTEST.obj	8eb692736368d791
+11544	19296	6890208067012659	CMakeFiles/tpi2.dir/tests/sugerir121TEST.obj	3e8fbda6f9cd23ec
+12991	20032	6890208074397821	CMakeFiles/tpi2.dir/tests/jugasPlusTEST.obj	2dc0a35cc6b5a53a
+15426	21914	6890208093217157	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	2226dc5b59abfef7
+15476	55114	6890208424910189	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	d25cccc7cf3f4d67
+55119	66947	6890208543541367	lib/googletest-master/googlemock/gtest/libgtestd.a	c80b605519cbefc6
+66948	67280	6890208546884905	lib/googletest-master/googlemock/gtest/libgtest_maind.a	576ebb0b8568d98b
+67281	80525	6890208678481927	../tpi2.exe	3b519a79432b728e
+2999	11832	6890331342789088	CMakeFiles/tpi2.dir/tests/minasAdyacentesTEST.obj	8eb692736368d791
+34	14356	6890331368048739	CMakeFiles/tpi2.dir/tests/ganoTEST.obj	a180256c5179e9aa
+14357	26248	6890331486696767	../tpi2.exe	3b519a79432b728e
+19	9638	6890331775277729	CMakeFiles/tpi2.dir/tests/ganoTEST.obj	a180256c5179e9aa
+9641	19180	6890331870496346	../tpi2.exe	3b519a79432b728e
+14	15340	6890335396444887	CMakeFiles/tpi2.dir/tests/ganoTEST.obj	a180256c5179e9aa
+15343	25692	6890335499770272	../tpi2.exe	3b519a79432b728e
+19	7800	6890336433327666	CMakeFiles/tpi2.dir/tests/ganoTEST.obj	a180256c5179e9aa
+7802	16943	6890336524641265	../tpi2.exe	3b519a79432b728e
