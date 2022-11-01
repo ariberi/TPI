@@ -18,7 +18,7 @@ bool esAdyacente121(pos p, jugadas& j, tablero& t);
 bool es121Horizontal(pos p, jugadas& j, tablero& t);
 bool es121Vertical(pos p, jugadas& j, tablero& t);
 bool esPosicionSinJugarYSinBanderita(tablero& t, jugadas& j, banderitas& b, pos p);
-
+vector<pos> CasillasVacias(tablero& t);
 
 
 
