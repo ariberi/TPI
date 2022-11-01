@@ -113,6 +113,22 @@ bool esPosicionSinJugarYSinBanderita(tablero& t, jugadas& j, banderitas& b, pos 
 
 }
 
+vector<pos> CasillasVacias(tablero& t){
+
+    vector<pos> posicionesDeCasillasVacias;
+
+    for (int f = 0; f < t.size(); f++){
+        for (int c = 0; c < t[0].size(); c++){
+            if (t[f][c] == cVACIA){
+                pos p = make_pair(f,c);
+                posicionesDeCasillasVacias.push_back(p);
+            }
+        }
+    }
+    return posicionesDeCasillasVacias;
+
+}
+
 
 
 
