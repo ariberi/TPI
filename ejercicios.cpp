@@ -44,7 +44,8 @@ void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
         }
     }
 
-    if (not(posicionJugada(j,p))){
+    bool posJugada = posicionJugada(j,p);
+    if (not(posJugada)){
         b.push_back(p);
     }
 
@@ -52,6 +53,7 @@ void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
 }
 
 /******++++**************************** EJERCICIO perdio ***********+++***********************/
+
 bool perdio(tablero& t, jugadas& j) {
 
     bool res = false;
@@ -71,30 +73,33 @@ bool perdio(tablero& t, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO gano ***********+++***********************/
+
 bool gano(tablero& t, jugadas& j) {
 
-    bool res = false;
+    vector<pos> posicionesDeCasillasVacias = CasillasVacias(t);
 
-    for (int i = 0; i < t.size(); i++){
-        for (int k = 0; k < t[0].size(); k++){
-            pos p = make_pair(i,k);
-            if (posicionValida(t,p)){
-                if (t[i][k] == cVACIA && posicionJugada(j,p)){
-                    res = true;
-                }
+    int contador = 0;
+
+    for (int i = 0; i < posicionesDeCasillasVacias.size(); i++){
+        pos p = posicionesDeCasillasVacias[i];
+        if (posicionValida(t,p)){
+            if (posicionJugada(j,p)){
+                contador++;
             }
         }
     }
+    bool res = (contador == posicionesDeCasillasVacias.size());
     return res;
 }
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
+
 void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 
     bool posJugada = posicionJugada(j,p);
     bool posBanderita = posicionTieneBanderita(b,p);
 
-    if ( not posJugada && not posBanderita /* && t[p.first][p.second] == cVACIA */ ){
+    if (not posJugada && not posBanderita){
 
         int cantidadMinasAdyacentes = minasAdyacentes(t,p);
         j.push_back(make_pair(p, cantidadMinasAdyacentes));
@@ -116,6 +121,7 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
+
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
 
     bool hay = false;
@@ -123,10 +129,12 @@ bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
         for (int k = 0; k < t[0].size(); k++){
 
             pos q = make_pair(i,k);
-            if (t[i][k] == cVACIA && esPosicionSinJugarYSinBanderita(t,j,b,q) && esAdyacente121(q, j, t)){
-                p = q;
-                j.push_back(make_pair(p, minasAdyacentes(t,p)));
-                hay = true;
+            if (esPosicionSinJugarYSinBanderita(t,j,b,q) && esAdyacente121(q, j, t)){
+                if (t[i][k] == cVACIA) {
+                    p = q;
+                    j.push_back(make_pair(p, minasAdyacentes(t, p)));
+                    hay = true;
+                }
             }
         }
     }
