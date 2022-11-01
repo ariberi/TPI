@@ -4,6 +4,7 @@
 #include "../ejercicios.h"
 #include "../auxiliares.h"
 #include "gtest/gtest.h"
+#include "definicionesTEST.h"
 
 using namespace std;
 
@@ -18,22 +19,6 @@ using namespace std;
 // ├───┼───┼───┼───┼───┤
 // │ * │ 2 │ * │ 1 │ 0 │
 // └───┴───┴───┴───┴───┘
-
-tablero t = {
-        { cMINA,  cMINA,  cVACIA, cVACIA, cVACIA },
-        { cVACIA, cVACIA, cVACIA, cMINA,  cVACIA },
-        { cVACIA, cMINA,  cVACIA, cVACIA, cVACIA },
-        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
-        { cMINA,  cVACIA, cMINA,  cVACIA, cVACIA },
-};
-
-vector<pos> posicionesVacias = {
-        {0, 2}, {0, 3}, {0, 4},
-        {1, 0}, {1, 1}, {1, 2}, {1, 4},
-        {2, 0}, {2, 2}, {2, 3}, {2, 4},
-        {3, 0}, {3, 1}, {3, 2}, {3, 3},
-        {4, 1}, {4, 3}
-};
 
 jugadas jugadasTodaviaNoGano = {
         jugada(pos(0, 2), 2),jugada(pos(0, 4), 1),
@@ -50,11 +35,6 @@ jugadas jugadasGanoElJuego = {
         jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
 };
 
-jugadas jugadasPerdio = {
-        jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
-        jugada(pos(2,1), 0)
-};
-
 TEST(ganoTEST, todaviaNoGano){
     jugadas j = jugadasTodaviaNoGano;
     ASSERT_FALSE(gano(t, j));
@@ -65,11 +45,6 @@ TEST(ganoTEST, ganoElJuego){
     ASSERT_TRUE(gano(t, j));
 }
 
-TEST(ganoTEST, perdioElJuego){
-    jugadas j = jugadasPerdio;
-    ASSERT_FALSE(gano(t, j));
-
-}
 TEST(ganoTEST, listaVacia){
     jugadas j = {};
     ASSERT_FALSE(gano(t, j));
