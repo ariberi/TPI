@@ -22,7 +22,7 @@ set(SOURCE_FILES
         tests/perdioTEST.cpp
         tests/minasAdyacentesTEST.cpp
         tests/sugerir121TEST.cpp
-        tests/jugasPlusTEST.cpp tests/definicionesTEST.h)
+        tests/jugarPlusTEST.cpp tests/definicionesTEST.h)
 
 add_executable(tpi2 ${SOURCE_FILES} ${DIR_TESTS})
 

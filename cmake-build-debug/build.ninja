@@ -105,8 +105,8 @@ build CMakeFiles/tpi2.dir/tests/sugerir121TEST.obj: CXX_COMPILER__tpi2_Debug C$:
   OBJECT_DIR = CMakeFiles\tpi2.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi2.dir\tests
 
-build CMakeFiles/tpi2.dir/tests/jugasPlusTEST.obj: CXX_COMPILER__tpi2_Debug C$:/Users/berin/Documents/facultad/exactas/1ero/ALGO$ 1/tpi2/tests/jugasPlusTEST.cpp || cmake_object_order_depends_target_tpi2
-  DEP_FILE = CMakeFiles\tpi2.dir\tests\jugasPlusTEST.obj.d
+build CMakeFiles/tpi2.dir/tests/jugarPlusTEST.obj: CXX_COMPILER__tpi2_Debug C$:/Users/berin/Documents/facultad/exactas/1ero/ALGO$ 1/tpi2/tests/jugarPlusTEST.cpp || cmake_object_order_depends_target_tpi2
+  DEP_FILE = CMakeFiles\tpi2.dir\tests\jugarPlusTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++14
   INCLUDES = -isystem "C:/Users/berin/Documents/facultad/exactas/1ero/ALGO 1/tpi2/lib/googletest-master/googletest/include"
   OBJECT_DIR = CMakeFiles\tpi2.dir
@@ -120,7 +120,7 @@ build CMakeFiles/tpi2.dir/tests/jugasPlusTEST.obj: CXX_COMPILER__tpi2_Debug C$:/
 #############################################
 # Link the executable ..\tpi2.exe
 
-build ../tpi2.exe: CXX_EXECUTABLE_LINKER__tpi2_Debug CMakeFiles/tpi2.dir/main.obj CMakeFiles/tpi2.dir/ejercicios.obj CMakeFiles/tpi2.dir/auxiliares.obj CMakeFiles/tpi2.dir/tests/cambiarBanderitaTEST.obj CMakeFiles/tpi2.dir/tests/ganoTEST.obj CMakeFiles/tpi2.dir/tests/perdioTEST.obj CMakeFiles/tpi2.dir/tests/minasAdyacentesTEST.obj CMakeFiles/tpi2.dir/tests/sugerir121TEST.obj CMakeFiles/tpi2.dir/tests/jugasPlusTEST.obj | lib/googletest-master/googlemock/gtest/libgtestd.a lib/googletest-master/googlemock/gtest/libgtest_maind.a lib/googletest-master/googlemock/gtest/libgtestd.a || lib/googletest-master/googlemock/gtest/libgtest_maind.a lib/googletest-master/googlemock/gtest/libgtestd.a
+build ../tpi2.exe: CXX_EXECUTABLE_LINKER__tpi2_Debug CMakeFiles/tpi2.dir/main.obj CMakeFiles/tpi2.dir/ejercicios.obj CMakeFiles/tpi2.dir/auxiliares.obj CMakeFiles/tpi2.dir/tests/cambiarBanderitaTEST.obj CMakeFiles/tpi2.dir/tests/ganoTEST.obj CMakeFiles/tpi2.dir/tests/perdioTEST.obj CMakeFiles/tpi2.dir/tests/minasAdyacentesTEST.obj CMakeFiles/tpi2.dir/tests/sugerir121TEST.obj CMakeFiles/tpi2.dir/tests/jugarPlusTEST.obj | lib/googletest-master/googlemock/gtest/libgtestd.a lib/googletest-master/googlemock/gtest/libgtest_maind.a lib/googletest-master/googlemock/gtest/libgtestd.a || lib/googletest-master/googlemock/gtest/libgtest_maind.a lib/googletest-master/googlemock/gtest/libgtestd.a
   FLAGS = -g --coverage -g
   LINK_LIBRARIES = lib/googletest-master/googlemock/gtest/libgtestd.a  lib/googletest-master/googlemock/gtest/libgtest_maind.a  lib/googletest-master/googlemock/gtest/libgtestd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tpi2.dir
