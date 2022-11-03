@@ -50,16 +50,6 @@ bool posicionTieneBanderita(banderitas& b, pos p) {
     return false;
 }
 
-//void agregarPosAJugadas(tablero& t, jugadas& j, banderitas& b, pos p) {
-//
-//    bool posJugada = posicionJugada(j,p);
-//    bool posBanderita = posicionTieneBanderita(b,p);
-//
-//    if ( not posJugada && not posBanderita && t[p.first][p.second] == cVACIA){
-//        j.push_back(make_pair(p, minasAdyacentes(t,p)));
-//    }
-//}
-//
 
 bool esAdyacente121(pos p, jugadas& j, tablero& t) {
 

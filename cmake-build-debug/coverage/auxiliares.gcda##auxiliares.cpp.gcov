@@ -384,7 +384,7 @@ branch  8 taken 0
 function _Z14CasillasVaciasRSt6vectorIS_IbSaIbEESaIS1_EE called 3 returned 100% blocks executed 80%
         3:  113:vector<pos> CasillasVacias(tablero& t) {
         -:  114:
-        3:  115:    vector<pos> posicionesDeCasillasVacias;
+        3:  115:    vector<pos> posicionesDeCasillasVacias = {};
         3:  115-block  0
 call    0 returned 3
         -:  116:
