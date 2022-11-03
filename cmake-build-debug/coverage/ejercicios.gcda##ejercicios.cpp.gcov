@@ -1,0 +1,324 @@
+        -:    0:Source:C:/Users/berin/Documents/facultad/exactas/1ero/ALGO 1/tpi2/ejercicios.cpp
+        -:    0:Graph:C:\Users\berin\Documents\facultad\exactas\1ero\ALGO 1\tpi2\cmake-build-debug\CMakeFiles\tpi2.dir\ejercicios.gcno
+        -:    0:Data:C:\Users\berin\Documents\facultad\exactas\1ero\ALGO 1\tpi2\cmake-build-debug\CMakeFiles\tpi2.dir\ejercicios.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Este archivo contiene las definiciones de las funciones que implementan los ejercicios
+        -:    3://
+        -:    4:
+        -:    5:#include <stdio.h>
+        -:    6:#include <iostream>
+        -:    7:
+        -:    8:
+        -:    9:#include "definiciones.h"
+        -:   10:#include "ejercicios.h"
+        -:   11:#include "auxiliares.h"
+        -:   12:
+        -:   13:using namespace std;
+        -:   14:
+        -:   15:/******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
+        -:   16:
+function _Z15minasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 20 returned 100% blocks executed 90%
+       20:   17:int minasAdyacentes(tablero& t, pos p) {
+        -:   18:
+       20:   19:    int minas = 0;
+       20:   20:    int p0 = p.first;
+       20:   21:    int p1 = p.second;
+        -:   22:
+       80:   23:    for(int fila = -1; fila<=1; fila++){
+       20:   23-block  0
+       60:   23-block  1
+       80:   23-block  2
+branch  0 taken 60
+branch  1 taken 20 (fallthrough)
+      240:   24:        for(int col = -1; col <=1; col++){
+       60:   24-block  0
+      180:   24-block  1
+      240:   24-block  2
+branch  0 taken 180
+branch  1 taken 60 (fallthrough)
+        -:   25:
+      180:   26:            if (adyacenteValida(t,p, fila, col) && t[p0+fila][p1+col] == cMINA){
+      180:   26-block  0
+call    0 returned 180
+branch  1 taken 180 (fallthrough)
+branch  2 taken 0 (throw)
+      180:   26-block  1
+branch  3 taken 120 (fallthrough)
+branch  4 taken 60
+      120:   26-block  2
+call    5 returned 120
+call    6 returned 120
+branch  7 taken 120 (fallthrough)
+branch  8 taken 0 (throw)
+      120:   26-block  3
+call    9 returned 120
+branch 10 taken 29 (fallthrough)
+branch 11 taken 91
+       29:   26-block  4
+      151:   26-block  5
+      180:   26-block  6
+branch 12 taken 29 (fallthrough)
+branch 13 taken 151
+    $$$$$:   26-block  7
+       29:   27:                minas++;
+       29:   27-block  0
+        -:   28:            }
+        -:   29:        }
+        -:   30:    }
+       20:   31:    return minas;
+       20:   31-block  0
+       20:   31-block  1
+        -:   32:}
+        -:   33:
+        -:   34:/******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
+        -:   35:
+function _Z16cambiarBanderitaRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EES6_RS_IS6_SaIS6_EE called 3 returned 100% blocks executed 89%
+        3:   36:void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
+        -:   37:
+        6:   38:    for (int i = 0; i < b.size(); i++){
+        3:   38-block  0
+        3:   38-block  1
+        6:   38-block  2
+call    0 returned 6
+branch  1 taken 4
+branch  2 taken 2 (fallthrough)
+        4:   39:        if (b[i] == p){
+        4:   39-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 1 (fallthrough)
+branch  3 taken 3
+        1:   40:            b.erase(b.begin()+i);
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   40-block  1
+    $$$$$:   40-block  2
+        1:   41:            return;
+        1:   41-block  0
+        -:   42:        }
+        -:   43:    }
+        2:   44:    bool posJugada = posicionJugada(j,p);
+        2:   44-block  0
+call    0 returned 2
+        2:   45:    if (not(posJugada)){
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   46:        b.push_back(p);
+        1:   46-block  0
+call    0 returned 1
+        -:   47:    }
+        -:   48:}
+        -:   49:
+        -:   50:/******++++**************************** EJERCICIO perdio ***********+++***********************/
+        -:   51:
+function _Z6perdioRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 3 returned 100% blocks executed 93%
+        3:   52:bool perdio(tablero& t, jugadas& j) {
+        -:   53:
+        3:   54:    bool res = false;
+       11:   55:    for (int i = 0; i < j.size(); i++){
+        3:   55-block  0
+        8:   55-block  1
+       11:   55-block  2
+call    0 returned 11
+branch  1 taken 8
+branch  2 taken 3 (fallthrough)
+        -:   56:
+        8:   57:        pair<int,int> p = j[i].first;
+        8:   57-block  0
+call    0 returned 8
+        8:   58:        int p0 = p.first;
+        8:   59:        int p1 = p.second;
+        -:   60:
+        8:   61:        if (t[p0][p1] == cMINA){
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:   61-block  0
+call    4 returned 8
+branch  5 taken 1 (fallthrough)
+branch  6 taken 7
+    $$$$$:   61-block  1
+        1:   62:            res = true;
+        1:   62-block  0
+        -:   63:        }
+        -:   64:    }
+        3:   65:    return res;
+        3:   65-block  0
+        3:   65-block  1
+        -:   66:}
+        -:   67:
+        -:   68:/******++++**************************** EJERCICIO gano ***********+++***********************/
+        -:   69:
+function _Z4ganoRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 3 returned 100% blocks executed 84%
+        3:   70:bool gano(tablero& t, jugadas& j) {
+        -:   71:
+        3:   72:    vector<pos> posicionesDeCasillasVacias = CasillasVacias(t);
+        3:   72-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   73:
+        3:   74:    int contador = 0;
+        -:   75:
+       60:   76:    for (int i = 0; i < posicionesDeCasillasVacias.size(); i++){
+        3:   76-block  0
+       57:   76-block  1
+       60:   76-block  2
+call    0 returned 60
+branch  1 taken 57
+branch  2 taken 3 (fallthrough)
+       57:   77:        pos p = posicionesDeCasillasVacias[i];
+       57:   77-block  0
+call    0 returned 57
+       57:   78:        if (posicionValida(t,p)){
+call    0 returned 57
+branch  1 taken 57 (fallthrough)
+branch  2 taken 0 (throw)
+       57:   78-block  0
+branch  3 taken 57 (fallthrough)
+branch  4 taken 0
+       57:   79:            if (posicionJugada(j,p)){
+       57:   79-block  0
+call    0 returned 57
+branch  1 taken 57 (fallthrough)
+branch  2 taken 0 (throw)
+       57:   79-block  1
+branch  3 taken 31 (fallthrough)
+branch  4 taken 26
+       31:   80:                contador++;
+       31:   80-block  0
+        -:   81:            }
+        -:   82:        }
+        -:   83:    }
+        3:   84:    bool res = (contador == posicionesDeCasillasVacias.size());
+        3:   84-block  0
+call    0 returned 3
+        3:   85:    return res;
+        3:   85-block  0
+        3:   86:}
+call    0 returned 3
+    $$$$$:   86-block  0
+call    1 never executed
+        -:   87:
+        -:   88:/******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
+        -:   89:
+function _Z9jugarPlusRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EES6_RS_IS5_IS6_iESaISA_EE called 10 returned 100% blocks executed 79%
+       10:   90:void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
+        -:   91:
+       10:   92:    bool posJugada = posicionJugada(j,p);
+       10:   92-block  0
+call    0 returned 10
+       10:   93:    bool posBanderita = posicionTieneBanderita(b,p);
+call    0 returned 10
+        -:   94:
+       10:   95:    if (not posJugada && not posBanderita){
+branch  0 taken 7 (fallthrough)
+branch  1 taken 3
+        7:   95-block  0
+branch  2 taken 6 (fallthrough)
+branch  3 taken 1
+        -:   96:
+        6:   97:        int cantidadMinasAdyacentes = minasAdyacentes(t,p);
+        6:   97-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   98:        j.push_back(make_pair(p, cantidadMinasAdyacentes));
+        6:   98-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   98-block  1
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   98-block  2
+        -:   99:
+        6:  100:        if (t[p.first][p.second] == cVACIA){
+        6:  100-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:  100-block  1
+call    4 returned 6
+branch  5 taken 5 (fallthrough)
+branch  6 taken 1
+    $$$$$:  100-block  2
+        5:  101:            if (cantidadMinasAdyacentes == 0){
+        5:  101-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        4:  102:                for(int fila = -1; fila<=1; fila++){
+        1:  102-block  0
+        3:  102-block  1
+        4:  102-block  2
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+       12:  103:                    for(int col = -1; col <=1; col++){
+        3:  103-block  0
+        9:  103-block  1
+       12:  103-block  2
+branch  0 taken 9
+branch  1 taken 3 (fallthrough)
+        9:  104:                        if (adyacenteValida(t,p, fila, col)){
+        9:  104-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:  104-block  1
+branch  3 taken 5 (fallthrough)
+branch  4 taken 4
+        5:  105:                            pos q = make_pair(p.first+fila, p.second+col);
+        5:  105-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  105-block  1
+    $$$$$:  105-block  2
+        5:  106:                            jugarPlus(t, b, q, j);
+        5:  106-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  107:                        }
+        -:  108:                    }
+        -:  109:                }
+        -:  110:            }
+        -:  111:        }
+        -:  112:    }
+       10:  113:}
+       10:  113-block  0
+        -:  114:
+        -:  115:/******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
+        -:  116:
+function _Z20sugerirAutomatico121RSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EERS_IS5_IS6_iESaISA_EERS6_ called 6 returned 100% blocks executed 100%
+        6:  117:bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
+        -:  118:
+        6:  119:    bool res = false;
+        -:  120:
+        6:  121:    if (esPosicionSinJugarYSinBanderita(t,j,b,p)){
+        6:  121-block  0
+call    0 returned 6
+branch  1 taken 5 (fallthrough)
+branch  2 taken 1
+        5:  122:        if (esAdyacente121(p, j, t)) {
+        5:  122-block  0
+call    0 returned 5
+branch  1 taken 2 (fallthrough)
+branch  2 taken 3
+        2:  123:            res = true;
+        2:  123-block  0
+        -:  124:        }
+        -:  125:    }
+        6:  126:    return res;
+        6:  126-block  0
+        -:  127:}
+        -:  128:

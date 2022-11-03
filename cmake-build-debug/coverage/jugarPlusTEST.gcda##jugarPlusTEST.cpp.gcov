@@ -1,0 +1,626 @@
+        -:    0:Source:C:/Users/berin/Documents/facultad/exactas/1ero/ALGO 1/tpi2/tests/jugarPlusTEST.cpp
+        -:    0:Graph:C:\Users\berin\Documents\facultad\exactas\1ero\ALGO 1\tpi2\cmake-build-debug\CMakeFiles\tpi2.dir\tests\jugarPlusTEST.gcno
+        -:    0:Data:C:\Users\berin\Documents\facultad\exactas\1ero\ALGO 1\tpi2\cmake-build-debug\CMakeFiles\tpi2.dir\tests\jugarPlusTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:#include "definicionesTEST.h"
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        -:    8:
+        -:    9:banderitas b = {pos(0,1), pos(4,0), pos(2,1)};
+        -:   10:
+        -:   11:
+        2:   12:TEST(jugarPlusTEST, posicionConBanderita){
+        -:   13:
+        1:   14:    pos p = make_pair(0,1);
+        -:   15:    jugadas j = {
+        -:   16:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   17:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   18:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   19:    };
+        -:   20:    jugadas j_esperada = {
+        -:   21:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   22:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   23:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0)
+        1:   24:    };
+        1:   25:    jugarPlus(t,b,p,j);
+       1*:   26:    ASSERT_EQ(j, j_esperada);
+        1:   27:}
+------------------
+_ZN39jugarPlusTEST_posicionConBanderita_Test8TestBodyEv:
+function _ZN39jugarPlusTEST_posicionConBanderita_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   12:TEST(jugarPlusTEST, posicionConBanderita){
+        -:   13:
+        1:   14:    pos p = make_pair(0,1);
+        -:   15:    jugadas j = {
+        -:   16:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   17:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   18:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   19:    };
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   19-block  1
+call    4 returned 1
+    $$$$$:   19-block  2
+call    5 never executed
+    $$$$$:   19-block  3
+    $$$$$:   19-block  4
+        -:   20:    jugadas j_esperada = {
+        -:   21:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   22:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   23:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0)
+        1:   24:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   24-block  0
+call    4 returned 1
+    $$$$$:   24-block  1
+call    5 never executed
+    $$$$$:   24-block  2
+    $$$$$:   24-block  3
+        1:   25:    jugarPlus(t,b,p,j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   26:    ASSERT_EQ(j, j_esperada);
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   26-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   26-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   26-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   26-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   26-block  6
+call   18 never executed
+call   19 never executed
+        1:   26-block  7
+        1:   26-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:   26-block  9
+call   23 never executed
+    $$$$$:   26-block 10
+    $$$$$:   26-block 11
+call   24 never executed
+    $$$$$:   26-block 12
+    $$$$$:   26-block 13
+call   25 never executed
+        1:   27:}
+        1:   27-block  0
+        1:   27-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   27-block  2
+        1:   27-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+    $$$$$:   27-block  4
+call    6 never executed
+    $$$$$:   27-block  5
+call    7 never executed
+------------------
+_ZN39jugarPlusTEST_posicionConBanderita_TestC1Ev:
+function _ZN39jugarPlusTEST_posicionConBanderita_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   12:TEST(jugarPlusTEST, posicionConBanderita){
+        1:   12-block  0
+call    0 returned 1
+------------------
+        -:   28:
+        2:   29:TEST(jugarPlusTEST, posicionYaJugada){
+        -:   30:
+        1:   31:    pos p = make_pair(0,2);
+        -:   32:    jugadas j = {
+        -:   33:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   34:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   35:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   36:    };
+        -:   37:    jugadas j_esperada = {
+        -:   38:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   39:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   40:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0)
+        1:   41:    };
+        1:   42:    jugarPlus(t,b,p,j);
+       1*:   43:    ASSERT_EQ(j, j_esperada);
+        1:   44:}
+------------------
+_ZN35jugarPlusTEST_posicionYaJugada_Test8TestBodyEv:
+function _ZN35jugarPlusTEST_posicionYaJugada_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   29:TEST(jugarPlusTEST, posicionYaJugada){
+        -:   30:
+        1:   31:    pos p = make_pair(0,2);
+        -:   32:    jugadas j = {
+        -:   33:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   34:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   35:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   36:    };
+        1:   36-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   36-block  1
+call    4 returned 1
+    $$$$$:   36-block  2
+call    5 never executed
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+        -:   37:    jugadas j_esperada = {
+        -:   38:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   39:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   40:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0)
+        1:   41:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   41-block  0
+call    4 returned 1
+    $$$$$:   41-block  1
+call    5 never executed
+    $$$$$:   41-block  2
+    $$$$$:   41-block  3
+        1:   42:    jugarPlus(t,b,p,j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   43:    ASSERT_EQ(j, j_esperada);
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   43-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   43-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   43-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   43-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   43-block  6
+call   18 never executed
+call   19 never executed
+        1:   43-block  7
+        1:   43-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:   43-block  9
+call   23 never executed
+    $$$$$:   43-block 10
+    $$$$$:   43-block 11
+call   24 never executed
+    $$$$$:   43-block 12
+    $$$$$:   43-block 13
+call   25 never executed
+        1:   44:}
+        1:   44-block  0
+        1:   44-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   44-block  2
+        1:   44-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+    $$$$$:   44-block  4
+call    6 never executed
+    $$$$$:   44-block  5
+call    7 never executed
+------------------
+_ZN35jugarPlusTEST_posicionYaJugada_TestC1Ev:
+function _ZN35jugarPlusTEST_posicionYaJugada_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   29:TEST(jugarPlusTEST, posicionYaJugada){
+        1:   29-block  0
+call    0 returned 1
+------------------
+        -:   45:
+        2:   46:TEST(jugarPlusTEST, posicionConMina){
+        -:   47:
+        1:   48:    pos p = make_pair(0,0);
+        -:   49:    jugadas j = {
+        -:   50:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   51:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   52:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   53:    };
+        -:   54:    jugadas j_esperada = {
+        -:   55:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   56:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   57:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        -:   58:            jugada(pos(0,0), 1)
+        1:   59:    };
+        1:   60:    jugarPlus(t,b,p,j);
+       1*:   61:    ASSERT_EQ(j, j_esperada);
+        1:   62:}
+------------------
+_ZN34jugarPlusTEST_posicionConMina_Test8TestBodyEv:
+function _ZN34jugarPlusTEST_posicionConMina_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   46:TEST(jugarPlusTEST, posicionConMina){
+        -:   47:
+        1:   48:    pos p = make_pair(0,0);
+        -:   49:    jugadas j = {
+        -:   50:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   51:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   52:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   53:    };
+        1:   53-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   53-block  1
+call    4 returned 1
+    $$$$$:   53-block  2
+call    5 never executed
+    $$$$$:   53-block  3
+    $$$$$:   53-block  4
+        -:   54:    jugadas j_esperada = {
+        -:   55:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   56:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   57:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        -:   58:            jugada(pos(0,0), 1)
+        1:   59:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  0
+call    4 returned 1
+    $$$$$:   59-block  1
+call    5 never executed
+    $$$$$:   59-block  2
+    $$$$$:   59-block  3
+        1:   60:    jugarPlus(t,b,p,j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   61:    ASSERT_EQ(j, j_esperada);
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   61-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   61-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   61-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   61-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   61-block  6
+call   18 never executed
+call   19 never executed
+        1:   61-block  7
+        1:   61-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:   61-block  9
+call   23 never executed
+    $$$$$:   61-block 10
+    $$$$$:   61-block 11
+call   24 never executed
+    $$$$$:   61-block 12
+    $$$$$:   61-block 13
+call   25 never executed
+        1:   62:}
+        1:   62-block  0
+        1:   62-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   62-block  2
+        1:   62-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+    $$$$$:   62-block  4
+call    6 never executed
+    $$$$$:   62-block  5
+call    7 never executed
+------------------
+_ZN34jugarPlusTEST_posicionConMina_TestC1Ev:
+function _ZN34jugarPlusTEST_posicionConMina_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   46:TEST(jugarPlusTEST, posicionConMina){
+        1:   46-block  0
+call    0 returned 1
+------------------
+        -:   63:
+        2:   64:TEST(jugarPlusTEST, posicionInicialVaciaConAlMenosUnaMinaAdyacente){
+        -:   65:
+        1:   66:    pos p = make_pair(0,3);
+        -:   67:    jugadas j = {
+        -:   68:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   69:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   70:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   71:    };
+        -:   72:    jugadas j_esperada = {
+        -:   73:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   74:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   75:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        -:   76:            jugada(pos(0,3), 1)
+        1:   77:    };
+        1:   78:    jugarPlus(t,b,p,j);
+       1*:   79:    ASSERT_EQ(j, j_esperada);
+        1:   80:}
+------------------
+_ZN65jugarPlusTEST_posicionInicialVaciaConAlMenosUnaMinaAdyacente_Test8TestBodyEv:
+function _ZN65jugarPlusTEST_posicionInicialVaciaConAlMenosUnaMinaAdyacente_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   64:TEST(jugarPlusTEST, posicionInicialVaciaConAlMenosUnaMinaAdyacente){
+        -:   65:
+        1:   66:    pos p = make_pair(0,3);
+        -:   67:    jugadas j = {
+        -:   68:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   69:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   70:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   71:    };
+        1:   71-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   71-block  1
+call    4 returned 1
+    $$$$$:   71-block  2
+call    5 never executed
+    $$$$$:   71-block  3
+    $$$$$:   71-block  4
+        -:   72:    jugadas j_esperada = {
+        -:   73:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   74:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   75:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        -:   76:            jugada(pos(0,3), 1)
+        1:   77:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   77-block  0
+call    4 returned 1
+    $$$$$:   77-block  1
+call    5 never executed
+    $$$$$:   77-block  2
+    $$$$$:   77-block  3
+        1:   78:    jugarPlus(t,b,p,j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   79:    ASSERT_EQ(j, j_esperada);
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   79-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   79-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   79-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   79-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   79-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   79-block  6
+call   18 never executed
+call   19 never executed
+        1:   79-block  7
+        1:   79-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:   79-block  9
+call   23 never executed
+    $$$$$:   79-block 10
+    $$$$$:   79-block 11
+call   24 never executed
+    $$$$$:   79-block 12
+    $$$$$:   79-block 13
+call   25 never executed
+        1:   80:}
+        1:   80-block  0
+        1:   80-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   80-block  2
+        1:   80-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+    $$$$$:   80-block  4
+call    6 never executed
+    $$$$$:   80-block  5
+call    7 never executed
+------------------
+_ZN65jugarPlusTEST_posicionInicialVaciaConAlMenosUnaMinaAdyacente_TestC1Ev:
+function _ZN65jugarPlusTEST_posicionInicialVaciaConAlMenosUnaMinaAdyacente_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   64:TEST(jugarPlusTEST, posicionInicialVaciaConAlMenosUnaMinaAdyacente){
+        1:   64-block  0
+call    0 returned 1
+------------------
+        -:   81:
+        2:   82:TEST(jugarPlusTEST, posicionInicialVaciaSinMinasAdyacentes){
+        -:   83:
+        1:   84:    pos p = make_pair(3,4);
+        -:   85:    jugadas j = {
+        -:   86:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   87:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   88:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   89:    };
+        -:   90:    jugadas j_esperada = {
+        -:   91:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   92:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   93:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        -:   94:            jugada(pos(3,4), 0), jugada(pos(2, 3), 1), jugada(pos(2, 4), 1), jugada(pos(3, 3), 1)
+        1:   95:    };
+        1:   96:    jugarPlus(t,b,p,j);
+       1*:   97:    ASSERT_EQ(j, j_esperada);
+        1:   98:}
+------------------
+_ZN57jugarPlusTEST_posicionInicialVaciaSinMinasAdyacentes_Test8TestBodyEv:
+function _ZN57jugarPlusTEST_posicionInicialVaciaSinMinasAdyacentes_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   82:TEST(jugarPlusTEST, posicionInicialVaciaSinMinasAdyacentes){
+        -:   83:
+        1:   84:    pos p = make_pair(3,4);
+        -:   85:    jugadas j = {
+        -:   86:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   87:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   88:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        1:   89:    };
+        1:   89-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   89-block  1
+call    4 returned 1
+    $$$$$:   89-block  2
+call    5 never executed
+    $$$$$:   89-block  3
+    $$$$$:   89-block  4
+        -:   90:    jugadas j_esperada = {
+        -:   91:            jugada(pos(0, 2), 2), jugada(pos(0, 4), 1),
+        -:   92:            jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
+        -:   93:            jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
+        -:   94:            jugada(pos(3,4), 0), jugada(pos(2, 3), 1), jugada(pos(2, 4), 1), jugada(pos(3, 3), 1)
+        1:   95:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   95-block  0
+call    4 returned 1
+    $$$$$:   95-block  1
+call    5 never executed
+    $$$$$:   95-block  2
+    $$$$$:   95-block  3
+        1:   96:    jugarPlus(t,b,p,j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   97:    ASSERT_EQ(j, j_esperada);
+        1:   97-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   97-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   97-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   97-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   97-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   97-block  6
+call   18 never executed
+call   19 never executed
+        1:   97-block  7
+        1:   97-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:   97-block  9
+call   23 never executed
+    $$$$$:   97-block 10
+    $$$$$:   97-block 11
+call   24 never executed
+    $$$$$:   97-block 12
+    $$$$$:   97-block 13
+call   25 never executed
+        1:   98:}
+        1:   98-block  0
+        1:   98-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   98-block  2
+        1:   98-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+    $$$$$:   98-block  4
+call    6 never executed
+    $$$$$:   98-block  5
+call    7 never executed
+------------------
+_ZN57jugarPlusTEST_posicionInicialVaciaSinMinasAdyacentes_TestC1Ev:
+function _ZN57jugarPlusTEST_posicionInicialVaciaSinMinasAdyacentes_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   82:TEST(jugarPlusTEST, posicionInicialVaciaSinMinasAdyacentes){
+        1:   82-block  0
+call    0 returned 1
+------------------
+        -:   99:
