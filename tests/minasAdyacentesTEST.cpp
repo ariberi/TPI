@@ -25,11 +25,11 @@ TEST(minasAdyacentesTEST, bordeSuperiorIzquierdo) {
     ASSERT_EQ(3, result);
 }
 
-TEST(minasAdyacentesTEST, bordeInferiorDerecho) {
+TEST(minasAdyacentesTEST, bordeInferiorDerechoConMina) {
     tablero tt =
             {{ cVACIA,  cMINA,  cMINA },
              { cMINA, cMINA, cMINA},
-             { cVACIA, cVACIA, cVACIA}};
+             { cVACIA, cVACIA, cMINA}};
     pos p = make_pair(2, 2);
     int result = minasAdyacentes(tt,p);
     ASSERT_EQ(2, result);
