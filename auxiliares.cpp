@@ -50,7 +50,6 @@ bool posicionTieneBanderita(banderitas& b, pos p) {
     return false;
 }
 
-
 bool esAdyacente121(pos p, jugadas& j, tablero& t) {
 
     bool res = false;

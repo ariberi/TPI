@@ -4,7 +4,6 @@
 #include "../ejercicios.h"
 #include "../auxiliares.h"
 #include "gtest/gtest.h"
-#include "definicionesTEST.h"
 
 using namespace std;
 
@@ -31,20 +30,28 @@ jugadas jugadasPerdio = {
         jugada(pos(2,1), 0)
 };
 
+tablero t3 = {
+        { cMINA,  cMINA,  cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cMINA,  cVACIA },
+        { cVACIA, cMINA,  cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+        { cMINA,  cVACIA, cMINA,  cVACIA, cVACIA },
+};
+
 
 TEST(perdioTEST, todaviaNoPerdio){
     jugadas j = jugadasTodaviaNoPerdio;
-    ASSERT_FALSE(perdio(t, j));
+    ASSERT_FALSE(perdio(t3, j));
 }
 
 TEST(perdioTEST, perdioElJuego){
     jugadas j = jugadasPerdio;
-    ASSERT_TRUE(perdio(t, j));
+    ASSERT_TRUE(perdio(t3, j));
 }
 
 TEST(perdioTEST, listaVacia){
     jugadas j = {};
-    ASSERT_FALSE(perdio(t, j));
+    ASSERT_FALSE(perdio(t3, j));
 }
 
 

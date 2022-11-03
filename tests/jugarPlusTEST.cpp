@@ -1,12 +1,19 @@
 #include "../ejercicios.h"
 #include "../auxiliares.h"
 #include "gtest/gtest.h"
-#include "definicionesTEST.h"
 
 using namespace std;
 
 
 banderitas b = {pos(0,1), pos(4,0), pos(2,1)};
+
+tablero t2 = {
+        { cMINA,  cMINA,  cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cMINA,  cVACIA },
+        { cVACIA, cMINA,  cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+        { cMINA,  cVACIA, cMINA,  cVACIA, cVACIA },
+};
 
 
 TEST(jugarPlusTEST, posicionConBanderita){
@@ -22,7 +29,7 @@ TEST(jugarPlusTEST, posicionConBanderita){
             jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
             jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0)
     };
-    jugarPlus(t,b,p,j);
+    jugarPlus(t2,b,p,j);
     ASSERT_EQ(j, j_esperada);
 }
 
@@ -39,7 +46,7 @@ TEST(jugarPlusTEST, posicionYaJugada){
             jugada(pos(1, 0), 3), jugada(pos(1, 4), 1),
             jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0)
     };
-    jugarPlus(t,b,p,j);
+    jugarPlus(t2,b,p,j);
     ASSERT_EQ(j, j_esperada);
 }
 
@@ -57,7 +64,7 @@ TEST(jugarPlusTEST, posicionConMina){
             jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
             jugada(pos(0,0), 1)
     };
-    jugarPlus(t,b,p,j);
+    jugarPlus(t2,b,p,j);
     ASSERT_EQ(j, j_esperada);
 }
 
@@ -75,7 +82,7 @@ TEST(jugarPlusTEST, posicionInicialVaciaConAlMenosUnaMinaAdyacente){
             jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
             jugada(pos(0,3), 1)
     };
-    jugarPlus(t,b,p,j);
+    jugarPlus(t2,b,p,j);
     ASSERT_EQ(j, j_esperada);
 }
 
@@ -93,7 +100,7 @@ TEST(jugarPlusTEST, posicionInicialVaciaSinMinasAdyacentes){
             jugada(pos(4, 1), 2),jugada(pos(4, 3), 1),jugada(pos(4, 4), 0),
             jugada(pos(3,4), 0), jugada(pos(2, 3), 1), jugada(pos(2, 4), 1), jugada(pos(3, 3), 1)
     };
-    jugarPlus(t,b,p,j);
+    jugarPlus(t2,b,p,j);
     ASSERT_EQ(j, j_esperada);
 }
 

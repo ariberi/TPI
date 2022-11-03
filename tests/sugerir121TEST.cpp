@@ -1,7 +1,7 @@
 #include "../ejercicios.h"
 #include "../auxiliares.h"
 #include "gtest/gtest.h"
-#include "definicionesTEST.h"
+
 
 using namespace std;
 
@@ -50,10 +50,6 @@ TEST(sugerir121TEST, posicionEnBanderita){
 
 TEST(sugerir121TEST, posicionYaJugada){
     pos p = pos(2,0);
-    jugadas jj1 = {
-            jugada(pos(1, 1), 1), jugada(pos(1, 2), 2), jugada(pos(1, 3), 1),
-            jugada(pos(2,2), 2),
-            jugada(pos(3, 1), 1), jugada(pos(3, 2), 2), jugada(pos(3, 3), 1)};
     banderitas b = {pos(4,3)};
     ASSERT_FALSE(sugerirAutomatico121(tt_horizontal,b,jj_horizontal,p));
 }

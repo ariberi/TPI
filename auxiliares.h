@@ -13,7 +13,6 @@ bool adyacenteValida(tablero& t, pos p, int& f, int& c);
 bool posicionValida(tablero& t, pos p);
 bool posicionJugada(jugadas& j, pos p);
 bool posicionTieneBanderita(banderitas& b, pos p);
-//void agregarPosAJugadas(tablero& t, jugadas& j, banderitas& b, pos p);
 bool esAdyacente121(pos p, jugadas& j, tablero& t);
 bool es121Horizontal(pos p, jugadas& j, tablero& t);
 bool es121Vertical(pos p, jugadas& j, tablero& t);
