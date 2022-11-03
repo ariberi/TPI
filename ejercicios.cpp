@@ -28,9 +28,7 @@ int minasAdyacentes(tablero& t, pos p) {
             }
         }
     }
-
     return minas;
-
 }
 
 /******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
@@ -43,13 +41,10 @@ void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
             return;
         }
     }
-
     bool posJugada = posicionJugada(j,p);
     if (not(posJugada)){
         b.push_back(p);
     }
-
-
 }
 
 /******++++**************************** EJERCICIO perdio ***********+++***********************/
@@ -67,9 +62,7 @@ bool perdio(tablero& t, jugadas& j) {
             res = true;
         }
     }
-
     return res;
-
 }
 
 /******++++**************************** EJERCICIO gano ***********+++***********************/
@@ -116,7 +109,6 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
                 }
             }
         }
-
     }
 }
 
@@ -124,20 +116,13 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
 
-    bool hay = false;
-    for (int i = 0; i < t.size(); i++){
-        for (int k = 0; k < t[0].size(); k++){
+    bool res = false;
 
-            pos q = make_pair(i,k);
-            if (esPosicionSinJugarYSinBanderita(t,j,b,q) && esAdyacente121(q, j, t)){
-                if (t[i][k] == cVACIA) {
-                    p = q;
-                    j.push_back(make_pair(p, minasAdyacentes(t, p)));
-                    hay = true;
-                }
-            }
+    if (esPosicionSinJugarYSinBanderita(t,j,b,p)){
+        if (esAdyacente121(p, j, t)) {
+            res = true;
         }
     }
-    return hay;
+    return res;
 }
 
