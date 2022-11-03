@@ -37,7 +37,6 @@ bool posicionJugada(jugadas& j, pos p) {
             return true;
         }
     }
-
     return false;
 }
 
@@ -66,17 +65,15 @@ bool esAdyacente121(pos p, jugadas& j, tablero& t) {
 
     bool res = false;
 
-    pos pos1 = make_pair(p.first-1, p.second);
-    pos pos2 = make_pair(p.first+1, p.second);
-    pos pos3 = make_pair(p.first, p.second-1);
-    pos pos4 = make_pair(p.first, p.second+1);
+    pos p1 = make_pair(p.first-1, p.second);
+    pos p2 = make_pair(p.first+1, p.second);
+    pos p3 = make_pair(p.first, p.second-1);
+    pos p4 = make_pair(p.first, p.second+1);
 
-    if (es121Horizontal(pos1,j, t) || es121Horizontal(pos2,j, t) || es121Vertical(pos3,j, t) || es121Vertical(pos4,j, t)){
+    if (es121Horizontal(p1,j, t) || es121Horizontal(p2,j, t) || es121Vertical(p3,j, t) || es121Vertical(p4,j, t)){
         res = true;
     }
-
     return res;
-
 }
 
 bool es121Horizontal(pos p, jugadas& j, tablero& t) {
@@ -113,22 +110,17 @@ bool esPosicionSinJugarYSinBanderita(tablero& t, jugadas& j, banderitas& b, pos 
 
 }
 
-vector<pos> CasillasVacias(tablero& t){
+vector<pos> CasillasVacias(tablero& t) {
 
     vector<pos> posicionesDeCasillasVacias;
 
-    for (int f = 0; f < t.size(); f++){
-        for (int c = 0; c < t[0].size(); c++){
-            if (t[f][c] == cVACIA){
-                pos p = make_pair(f,c);
+    for (int f = 0; f < t.size(); f++) {
+        for (int c = 0; c < t[0].size(); c++) {
+            if (t[f][c] == cVACIA) {
+                pos p = make_pair(f, c);
                 posicionesDeCasillasVacias.push_back(p);
             }
         }
     }
     return posicionesDeCasillasVacias;
-
 }
-
-
-
-
