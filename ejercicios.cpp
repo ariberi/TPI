@@ -14,6 +14,8 @@ using namespace std;
 
 /******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
 
+// Segun posiciones adyacentes, sean las posiciones de 1 a 8 (el peor caso) siempre da tiempo = 0 , es 0(1)
+
 int minasAdyacentes(tablero& t, pos p) {
 
     int minas = 0;
@@ -33,6 +35,8 @@ int minasAdyacentes(tablero& t, pos p) {
 
 /******++++**************************** EJERCICIO cambiarBanderita ***********+++***********************/
 
+// o(1) dada una posicion no jugada, pruebo con diferentes len de banderitas, en el peor caso pos no esta en banderitas ni jugada.
+
 void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
 
     for (int i = 0; i < b.size(); i++){
@@ -48,6 +52,8 @@ void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
 }
 
 /******++++**************************** EJERCICIO perdio ***********+++***********************/
+
+// o(1) en el peor caso el tablero esta completamente vacio de minas, el tablero entero esta jugado y no se perdio.
 
 bool perdio(tablero& t, jugadas& j) {
 
@@ -66,6 +72,8 @@ bool perdio(tablero& t, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO gano ***********+++***********************/
+
+// o(1) en el peor caso se jugo el tablero entero que esta vacio.
 
 bool gano(tablero& t, jugadas& j) {
 
@@ -86,6 +94,8 @@ bool gano(tablero& t, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
+
+// o(1) en el peor caso no hay minas adyacentes a la poscion jugada y debe descubrirse el tablero entero
 
 void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 
@@ -114,15 +124,32 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
 
+//o(1) el pero caso es cuando la poscion es la unica no jugada
+
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
 
-    bool res = false;
+    bool hay = false;
+    for (int i = 0; i < t.size(); i++){
+        for (int k = 0; k < t[0].size(); k++){
 
-    if (esPosicionSinJugarYSinBanderita(t,j,b,p)){
-        if (esAdyacente121(p, j, t)) {
-            res = true;
+            pos q = make_pair(i,k);
+            if (esPosicionSinJugarYSinBanderita(t,j,b,q) && esAdyacente121(q, j, t)){
+                if (t[i][k] == cVACIA) {
+                    p = q;
+                    j.push_back(make_pair(p, minasAdyacentes(t, p)));
+                    hay = true;
+                    return hay;
+                }
+            }
         }
     }
-    return res;
+    return hay;
 }
 
+/******++++***************************************++++***********************/
+
+/*
+acceder a cualquier elemento individual en una matriz requiere tiempo constante, ya que solo se debe realizar una operación para localizarlo.
+en todos los peores casos probados se debe acceder a una condicion verdadera para entrar a otra operacion constante, por lo tanto los algoritmos
+resultan de complejidad constantes en sus peores casos
+*/
