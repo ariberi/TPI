@@ -1,0 +1,425 @@
+        -:    0:Source:C:/Users/berin/Documents/facultad/exactas/1ero/ALGO 1/tpi2/auxiliares.cpp
+        -:    0:Graph:C:\Users\berin\Documents\facultad\exactas\1ero\ALGO 1\tpi2\cmake-build-debug\CMakeFiles\tpi2.dir\auxiliares.gcno
+        -:    0:Data:C:\Users\berin\Documents\facultad\exactas\1ero\ALGO 1\tpi2\cmake-build-debug\CMakeFiles\tpi2.dir\auxiliares.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Este archivo contiene las definiciones de las funciones auxiliares
+        -:    3:// que ustedes necesiten implementar. Tienen que coincidir con las
+        -:    4:// declaraciones de auxiliares.h
+        -:    5://
+        -:    6:
+        -:    7:#include <iostream>
+        -:    8:
+        -:    9:#include "definiciones.h"
+        -:   10:#include "ejercicios.h"
+        -:   11:#include "auxiliares.h"
+        -:   12:
+        -:   13:using namespace std;
+        -:   14:
+function _Z15adyacenteValidaRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiERiS7_ called 756 returned 100% blocks executed 100%
+      756:   15:bool adyacenteValida(tablero& t, pos p, int& f, int& c) {
+        -:   16:
+      756:   17:    int p0 = p.first;
+      756:   18:    int p1 = p.second;
+      756:   19:    int q0 = p0 + f;
+      756:   20:    int q1 = p1 + c;
+        -:   21:
+      756:   22:    return (q0 >= 0 && q0 < t.size() && q1 >= 0 && q1 < t[0].size() && (f != 0 || c != 0));
+      756:   22-block  0
+branch  0 taken 720 (fallthrough)
+branch  1 taken 36
+      720:   22-block  1
+call    2 returned 720
+branch  3 taken 702 (fallthrough)
+branch  4 taken 18
+      702:   22-block  2
+branch  5 taken 692 (fallthrough)
+branch  6 taken 10
+      692:   22-block  3
+call    7 returned 692
+call    8 returned 692
+branch  9 taken 677 (fallthrough)
+branch 10 taken 15
+      677:   22-block  4
+branch 11 taken 241 (fallthrough)
+branch 12 taken 436
+      241:   22-block  5
+branch 13 taken 157 (fallthrough)
+branch 14 taken 84
+      593:   22-block  6
+      163:   22-block  7
+      756:   22-block  8
+        -:   23:}
+        -:   24:
+function _Z14posicionValidaRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 146 returned 100% blocks executed 91%
+      146:   25:bool posicionValida(tablero& t, pos p) {
+        -:   26:
+      146:   27:    int p0 = p.first;
+      146:   28:    int p1 = p.second;
+        -:   29:
+     146*:   30:    return (p0 >= 0 && p0 < t.size() && p1 >= 0 && p1 < t[0].size());
+      146:   30-block  0
+branch  0 taken 146 (fallthrough)
+branch  1 taken 0
+      146:   30-block  1
+call    2 returned 146
+branch  3 taken 146 (fallthrough)
+branch  4 taken 0
+      146:   30-block  2
+branch  5 taken 146 (fallthrough)
+branch  6 taken 0
+      146:   30-block  3
+call    7 returned 146
+call    8 returned 146
+branch  9 taken 146 (fallthrough)
+branch 10 taken 0
+      146:   30-block  4
+    %%%%%:   30-block  5
+      146:   30-block  6
+        -:   31:}
+        -:   32:
+function _Z14posicionJugadaRSt6vectorISt4pairIS0_IiiEiESaIS2_EES1_ called 393 returned 100% blocks executed 100%
+      393:   33:bool posicionJugada(jugadas& j, pos p) {
+        -:   34:
+     3035:   35:    for (int i = 0; i < j.size(); i++){
+      393:   35-block  0
+     2642:   35-block  1
+     3035:   35-block  2
+call    0 returned 3035
+branch  1 taken 2772
+branch  2 taken 263 (fallthrough)
+     2772:   36:        if (j[i].first == p){
+     2772:   36-block  0
+call    0 returned 2772
+call    1 returned 2772
+branch  2 taken 130 (fallthrough)
+branch  3 taken 2642
+      130:   37:            return true;
+      130:   37-block  0
+        -:   38:        }
+        -:   39:    }
+      263:   40:    return false;
+      263:   40-block  0
+        -:   41:}
+        -:   42:
+function _Z22posicionTieneBanderitaRSt6vectorISt4pairIiiESaIS1_EES1_ called 99 returned 100% blocks executed 100%
+       99:   43:bool posicionTieneBanderita(banderitas& b, pos p) {
+        -:   44:
+      257:   45:    for (int i = 0; i < b.size(); i++){
+       99:   45-block  0
+      158:   45-block  1
+      257:   45-block  2
+call    0 returned 257
+branch  1 taken 164
+branch  2 taken 93 (fallthrough)
+      164:   46:        if (b[i] == p){
+      164:   46-block  0
+call    0 returned 164
+call    1 returned 164
+branch  2 taken 6 (fallthrough)
+branch  3 taken 158
+        6:   47:            return true;
+        6:   47-block  0
+        -:   48:        }
+        -:   49:    }
+       93:   50:    return false;
+       93:   50-block  0
+        -:   51:}
+        -:   52:
+function _Z14esAdyacente121St4pairIiiERSt6vectorIS_IS0_iESaIS2_EERS1_IS1_IbSaIbEESaIS7_EE called 58 returned 100% blocks executed 83%
+       58:   53:bool esAdyacente121(pos p, jugadas& j, tablero& t) {
+        -:   54:
+       58:   55:    bool res = false;
+        -:   56:
+       58:   57:    pos p1 = make_pair(p.first-1, p.second);
+       58:   57-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   57-block  1
+       58:   58:    pos p2 = make_pair(p.first+1, p.second);
+       58:   58-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   58-block  1
+       58:   59:    pos p3 = make_pair(p.first, p.second-1);
+       58:   59-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   59-block  1
+       58:   60:    pos p4 = make_pair(p.first, p.second+1);
+       58:   60-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   60-block  1
+        -:   61:    //n12
+       58:   62:    if (es121Horizontal(p1,j, t) || es121Horizontal(p2,j, t) || es121Vertical(p3,j, t) || es121Vertical(p4,j, t)){
+       58:   62-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+       58:   62-block  1
+branch  3 taken 58 (fallthrough)
+branch  4 taken 0
+       58:   62-block  2
+call    5 returned 58
+branch  6 taken 58 (fallthrough)
+branch  7 taken 0 (throw)
+       58:   62-block  3
+branch  8 taken 57 (fallthrough)
+branch  9 taken 1
+       57:   62-block  4
+call   10 returned 57
+branch 11 taken 57 (fallthrough)
+branch 12 taken 0 (throw)
+       57:   62-block  5
+branch 13 taken 57 (fallthrough)
+branch 14 taken 0
+       57:   62-block  6
+call   15 returned 57
+branch 16 taken 57 (fallthrough)
+branch 17 taken 0 (throw)
+       57:   62-block  7
+branch 18 taken 1 (fallthrough)
+branch 19 taken 56
+        2:   62-block  8
+       56:   62-block  9
+       58:   62-block 10
+branch 20 taken 2 (fallthrough)
+branch 21 taken 56
+        2:   63:        res = true;
+        2:   63-block  0
+        -:   64:    }
+       58:   65:    return res;
+       58:   65-block  0
+       58:   65-block  1
+        -:   66:}
+        -:   67:
+function _Z15es121HorizontalSt4pairIiiERSt6vectorIS_IS0_iESaIS2_EERS1_IS1_IbSaIbEESaIS7_EE called 116 returned 100% blocks executed 91%
+      116:   68:bool es121Horizontal(pos p, jugadas& j, tablero& t) {
+        -:   69:
+      116:   70:    bool res = false;
+        -:   71:
+      116:   72:    pos pos1 = make_pair(p.first, p.second-1);
+      116:   72-block  0
+call    0 returned 116
+branch  1 taken 116 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   72-block  1
+      116:   73:    pos pos2 = make_pair(p.first, p.second+1);
+      116:   73-block  0
+call    0 returned 116
+branch  1 taken 116 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   73-block  1
+        -:   74:
+      116:   75:    if ((posicionJugada(j,p) && minasAdyacentes(t,p) == 2 ) && (posicionJugada(j,pos1) && minasAdyacentes(t,pos1) == 1 ) && (posicionJugada(j,pos2) && minasAdyacentes(t,pos2) == 1 )){
+      116:   75-block  0
+call    0 returned 116
+branch  1 taken 116 (fallthrough)
+branch  2 taken 0 (throw)
+      116:   75-block  1
+branch  3 taken 26 (fallthrough)
+branch  4 taken 90
+       26:   75-block  2
+call    5 returned 26
+branch  6 taken 26 (fallthrough)
+branch  7 taken 0 (throw)
+       26:   75-block  3
+branch  8 taken 1 (fallthrough)
+branch  9 taken 25
+        1:   75-block  4
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   75-block  5
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   75-block  6
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   75-block  7
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:   75-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0 (throw)
+        1:   75-block  9
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   75-block 10
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   75-block 11
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:   75-block 12
+      115:   75-block 13
+      116:   75-block 14
+branch 30 taken 1 (fallthrough)
+branch 31 taken 115
+        1:   76:        res = true;
+        1:   76-block  0
+        -:   77:    }
+        -:   78:
+      116:   79:    return res;
+      116:   79-block  0
+      116:   79-block  1
+        -:   80:}
+        -:   81:
+function _Z13es121VerticalSt4pairIiiERSt6vectorIS_IS0_iESaIS2_EERS1_IS1_IbSaIbEESaIS7_EE called 114 returned 100% blocks executed 91%
+      114:   82:bool es121Vertical(pos p, jugadas& j, tablero& t){
+        -:   83:
+      114:   84:    bool res = false;
+        -:   85:
+      114:   86:    pos pos1 = make_pair(p.first-1, p.second);
+      114:   86-block  0
+call    0 returned 114
+branch  1 taken 114 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   86-block  1
+      114:   87:    pos pos2 = make_pair(p.first+1, p.second);
+      114:   87-block  0
+call    0 returned 114
+branch  1 taken 114 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   87-block  1
+        -:   88:
+      114:   89:    if ((posicionJugada(j,p) && minasAdyacentes(t,p) == 2 ) && (posicionJugada(j,pos1) && minasAdyacentes(t,pos1) == 1 ) && (posicionJugada(j,pos2) && minasAdyacentes(t,pos2) == 1 )){
+      114:   89-block  0
+call    0 returned 114
+branch  1 taken 114 (fallthrough)
+branch  2 taken 0 (throw)
+      114:   89-block  1
+branch  3 taken 33 (fallthrough)
+branch  4 taken 81
+       33:   89-block  2
+call    5 returned 33
+branch  6 taken 33 (fallthrough)
+branch  7 taken 0 (throw)
+       33:   89-block  3
+branch  8 taken 7 (fallthrough)
+branch  9 taken 26
+        7:   89-block  4
+call   10 returned 7
+branch 11 taken 7 (fallthrough)
+branch 12 taken 0 (throw)
+        7:   89-block  5
+branch 13 taken 7 (fallthrough)
+branch 14 taken 0
+        7:   89-block  6
+call   15 returned 7
+branch 16 taken 7 (fallthrough)
+branch 17 taken 0 (throw)
+        7:   89-block  7
+branch 18 taken 1 (fallthrough)
+branch 19 taken 6
+        1:   89-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0 (throw)
+        1:   89-block  9
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   89-block 10
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   89-block 11
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:   89-block 12
+      113:   89-block 13
+      114:   89-block 14
+branch 30 taken 1 (fallthrough)
+branch 31 taken 113
+        1:   90:        res = true;
+        1:   90-block  0
+        -:   91:    }
+        -:   92:
+      114:   93:    return res;
+      114:   93-block  0
+      114:   93-block  1
+        -:   94:}
+        -:   95:
+function _Z31esPosicionSinJugarYSinBanderitaRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EERS_IS6_SaIS6_EES6_ called 89 returned 100% blocks executed 100%
+       89:   96:bool esPosicionSinJugarYSinBanderita(tablero& t, jugadas& j, banderitas& b, pos p){
+        -:   97:
+       89:   98:    return (posicionValida(t,p) && not posicionTieneBanderita(b,p) && not posicionJugada(j,p));
+       89:   98-block  0
+call    0 returned 89
+branch  1 taken 89 (fallthrough)
+branch  2 taken 0
+       89:   98-block  1
+call    3 returned 89
+branch  4 taken 84 (fallthrough)
+branch  5 taken 5
+       84:   98-block  2
+call    6 returned 84
+branch  7 taken 58 (fallthrough)
+branch  8 taken 26
+       58:   98-block  3
+       31:   98-block  4
+       89:   98-block  5
+        -:   99:
+        -:  100:}
+        -:  101:
+function _Z14CasillasVaciasRSt6vectorIS_IbSaIbEESaIS1_EE called 3 returned 100% blocks executed 80%
+        3:  102:vector<pos> CasillasVacias(tablero& t) {
+        -:  103:
+        3:  104:    vector<pos> posicionesDeCasillasVacias;
+        3:  104-block  0
+call    0 returned 3
+        -:  105:
+       18:  106:    for (int f = 0; f < t.size(); f++) {
+       15:  106-block  0
+       18:  106-block  1
+call    0 returned 18
+branch  1 taken 15
+branch  2 taken 3 (fallthrough)
+       90:  107:        for (int c = 0; c < t[0].size(); c++) {
+       15:  107-block  0
+       75:  107-block  1
+       90:  107-block  2
+call    0 returned 90
+call    1 returned 90
+branch  2 taken 75
+branch  3 taken 15 (fallthrough)
+       75:  108:            if (t[f][c] == cVACIA) {
+       75:  108-block  0
+call    0 returned 75
+call    1 returned 75
+branch  2 taken 75 (fallthrough)
+branch  3 taken 0 (throw)
+       75:  108-block  1
+call    4 returned 75
+branch  5 taken 57 (fallthrough)
+branch  6 taken 18
+    $$$$$:  108-block  2
+       57:  109:                pos p = make_pair(f, c);
+       57:  109-block  0
+call    0 returned 57
+branch  1 taken 57 (fallthrough)
+branch  2 taken 0 (throw)
+       57:  110:                posicionesDeCasillasVacias.push_back(p);
+       57:  110-block  0
+call    0 returned 57
+branch  1 taken 57 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  111:            }
+        -:  112:        }
+        -:  113:    }
+        3:  114:    return posicionesDeCasillasVacias;
+        3:  114-block  0
+        3:  114-block  1
+    =====:  115:}
+    $$$$$:  115-block  0
+call    0 never executed
+        -:  116:
+        -:  117://
