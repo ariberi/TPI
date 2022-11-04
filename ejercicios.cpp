@@ -4,8 +4,6 @@
 
 #include <stdio.h>
 #include <iostream>
-
-
 #include "definiciones.h"
 #include "ejercicios.h"
 #include "auxiliares.h"
