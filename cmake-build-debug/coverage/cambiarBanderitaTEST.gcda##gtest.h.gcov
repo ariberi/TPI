@@ -305,9 +305,9 @@
         -:  301:  }
         -:  302:
         -:  303:  // Returns true iff the assertion succeeded.
-function _ZNK7testing15AssertionResultcvbEv called 25 returned 100% blocks executed 100%
-       25:  304:  operator bool() const { return success_; }  // NOLINT
-       25:  304-block  0
+function _ZNK7testing15AssertionResultcvbEv called 28 returned 100% blocks executed 100%
+       28:  304:  operator bool() const { return success_; }  // NOLINT
+       28:  304-block  0
         -:  305:
         -:  306:  // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
         -:  307:  AssertionResult operator!() const;

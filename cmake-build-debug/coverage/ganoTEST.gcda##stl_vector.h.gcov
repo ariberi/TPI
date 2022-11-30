@@ -400,16 +400,16 @@ call    0 never executed
         -:  327:#endif
         -:  328:
         -:  329:      _GLIBCXX20_CONSTEXPR
-function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EEC2EyRKS3_ called 4 returned 100% blocks executed 80%
-        4:  330:      _Vector_base(size_t __n, const allocator_type& __a)
-        4:  331:      : _M_impl(__a)
-        4:  331-block  0
-call    0 returned 4
-        4:  332:      { _M_create_storage(__n); }
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EEC2EyRKS3_ called 6 returned 100% blocks executed 80%
+        6:  330:      _Vector_base(size_t __n, const allocator_type& __a)
+        6:  331:      : _M_impl(__a)
+        6:  331-block  0
+call    0 returned 6
+        6:  332:      { _M_create_storage(__n); }
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-        4:  332-block  0
+        6:  332-block  0
     $$$$$:  332-block  1
 call    3 never executed
         -:  333:
@@ -555,15 +555,15 @@ call    0 never executed
         -:  390:    protected:
         -:  391:      _GLIBCXX20_CONSTEXPR
         -:  392:      void
-function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE17_M_create_storageEy called 4 returned 100% blocks executed 100%
-        4:  393:      _M_create_storage(size_t __n)
+function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE17_M_create_storageEy called 6 returned 100% blocks executed 100%
+        6:  393:      _M_create_storage(size_t __n)
         -:  394:      {
-        4:  395:	this->_M_impl._M_start = this->_M_allocate(__n);
-        4:  395-block  0
-call    0 returned 4
-        4:  396:	this->_M_impl._M_finish = this->_M_impl._M_start;
-        4:  397:	this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
-        4:  398:      }
+        6:  395:	this->_M_impl._M_start = this->_M_allocate(__n);
+        6:  395-block  0
+call    0 returned 6
+        6:  396:	this->_M_impl._M_finish = this->_M_impl._M_start;
+        6:  397:	this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+        6:  398:      }
         -:  399:    };
         -:  400:
         -:  401:  /**
@@ -764,39 +764,39 @@ call    0 returned 2
         -:  593:       *  by @a __x (unless the allocator traits dictate a different object).
         -:  594:       */
         -:  595:      _GLIBCXX20_CONSTEXPR
-function _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EEC1ERKS4_ called 4 returned 100% blocks executed 73%
-        4:  596:      vector(const vector& __x)
+function _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EEC1ERKS4_ called 6 returned 100% blocks executed 73%
+        6:  596:      vector(const vector& __x)
         -:  597:      : _Base(__x.size(),
-        4:  598:	_Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
-        4:  598-block  0
-call    0 returned 4
-call    1 returned 4
-branch  2 taken 4 (fallthrough)
+        6:  598:	_Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
+        6:  598-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
 branch  3 taken 0 (throw)
-        4:  598-block  1
-call    4 returned 4
-call    5 returned 4
-branch  6 taken 4 (fallthrough)
+        6:  598-block  1
+call    4 returned 6
+call    5 returned 6
+branch  6 taken 6 (fallthrough)
 branch  7 taken 0 (throw)
-        4:  598-block  2
-call    8 returned 4
+        6:  598-block  2
+call    8 returned 6
     $$$$$:  598-block  3
 call    9 never executed
     $$$$$:  598-block  4
 call   10 never executed
         -:  599:      {
-        4:  600:	this->_M_impl._M_finish =
-        4:  601:	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
-call    0 returned 4
-call    1 returned 4
-call    2 returned 4
-branch  3 taken 4 (fallthrough)
+        6:  600:	this->_M_impl._M_finish =
+        6:  601:	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+branch  3 taken 6 (fallthrough)
 branch  4 taken 0 (throw)
         -:  602:				      this->_M_impl._M_start,
-        4:  603:				      _M_get_Tp_allocator());
-call    0 returned 4
-        4:  604:      }
-        4:  604-block  0
+        6:  603:				      _M_get_Tp_allocator());
+call    0 returned 6
+        6:  604:      }
+        6:  604-block  0
     $$$$$:  604-block  1
 call    0 never executed
         -:  605:
@@ -1142,11 +1142,11 @@ call    0 never executed
         -:  875:       */
         -:  876:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  877:      const_iterator
-function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE5beginEv called 14 returned 100% blocks executed 100%
-       14:  878:      begin() const _GLIBCXX_NOEXCEPT
-       14:  879:      { return const_iterator(this->_M_impl._M_start); }
-       14:  879-block  0
-call    0 returned 14
+function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE5beginEv called 16 returned 100% blocks executed 100%
+       16:  878:      begin() const _GLIBCXX_NOEXCEPT
+       16:  879:      { return const_iterator(this->_M_impl._M_start); }
+       16:  879-block  0
+call    0 returned 16
         -:  880:
         -:  881:      /**
         -:  882:       *  Returns a read/write iterator that points one past the last
@@ -1165,11 +1165,11 @@ call    0 returned 14
         -:  895:       */
         -:  896:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  897:      const_iterator
-function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE3endEv called 9 returned 100% blocks executed 100%
-        9:  898:      end() const _GLIBCXX_NOEXCEPT
-        9:  899:      { return const_iterator(this->_M_impl._M_finish); }
-        9:  899-block  0
-call    0 returned 9
+function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE3endEv called 11 returned 100% blocks executed 100%
+       11:  898:      end() const _GLIBCXX_NOEXCEPT
+       11:  899:      { return const_iterator(this->_M_impl._M_finish); }
+       11:  899-block  0
+call    0 returned 11
         -:  900:
         -:  901:      /**
         -:  902:       *  Returns a read/write reverse iterator that points to the

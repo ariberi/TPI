@@ -1186,19 +1186,19 @@
         -: 1182:  typedef T element_type;
         -: 1183:
         -: 1184:  explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
-      109: 1185:  ~scoped_ptr() { reset(); }
+      115: 1185:  ~scoped_ptr() { reset(); }
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED1Ev:
-function _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED1Ev called 25 returned 100% blocks executed 100%
-       25: 1185:  ~scoped_ptr() { reset(); }
-       25: 1185-block  0
-call    0 returned 25
+function _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED1Ev called 28 returned 100% blocks executed 100%
+       28: 1185:  ~scoped_ptr() { reset(); }
+       28: 1185-block  0
+call    0 returned 28
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEED1Ev:
-function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEED1Ev called 84 returned 100% blocks executed 100%
-       84: 1185:  ~scoped_ptr() { reset(); }
-       84: 1185-block  0
-call    0 returned 84
+function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEED1Ev called 87 returned 100% blocks executed 100%
+       87: 1185:  ~scoped_ptr() { reset(); }
+       87: 1185-block  0
+call    0 returned 87
 ------------------
         -: 1186:
         -: 1187:  T& operator*() const { return *ptr_; }
@@ -1215,46 +1215,46 @@ function _ZNK7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_t
         -: 1194:    return ptr;
         -: 1195:  }
         -: 1196:
-      109: 1197:  void reset(T* p = NULL) {
-      109: 1198:    if (p != ptr_) {
-      84*: 1199:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
-      84*: 1200:        delete ptr_;
+      115: 1197:  void reset(T* p = NULL) {
+      115: 1198:    if (p != ptr_) {
+      87*: 1199:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
+      87*: 1200:        delete ptr_;
         -: 1201:      }
-      84*: 1202:      ptr_ = p;
+      87*: 1202:      ptr_ = p;
         -: 1203:    }
-      109: 1204:  }
+      115: 1204:  }
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEE5resetEPS7_:
-function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEE5resetEPS7_ called 84 returned 100% blocks executed 100%
-       84: 1197:  void reset(T* p = NULL) {
-       84: 1198:    if (p != ptr_) {
-       84: 1198-block  0
-branch  0 taken 84 (fallthrough)
+function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEE5resetEPS7_ called 87 returned 100% blocks executed 100%
+       87: 1197:  void reset(T* p = NULL) {
+       87: 1198:    if (p != ptr_) {
+       87: 1198-block  0
+branch  0 taken 87 (fallthrough)
 branch  1 taken 0
-       84: 1199:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
-       84: 1199-block  0
-call    0 returned 84
-branch  1 taken 84 (fallthrough)
+       87: 1199:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
+       87: 1199-block  0
+call    0 returned 87
+branch  1 taken 87 (fallthrough)
 branch  2 taken 0
-       84: 1200:        delete ptr_;
-       84: 1200-block  0
-branch  0 taken 84 (fallthrough)
+       87: 1200:        delete ptr_;
+       87: 1200-block  0
+branch  0 taken 87 (fallthrough)
 branch  1 taken 0
-       84: 1200-block  1
-call    2 returned 84
+       87: 1200-block  1
+call    2 returned 87
         -: 1201:      }
-       84: 1202:      ptr_ = p;
-       84: 1202-block  0
+       87: 1202:      ptr_ = p;
+       87: 1202-block  0
         -: 1203:    }
-       84: 1204:  }
+       87: 1204:  }
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5resetEPS7_:
-function _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5resetEPS7_ called 25 returned 100% blocks executed 25%
-       25: 1197:  void reset(T* p = NULL) {
-       25: 1198:    if (p != ptr_) {
-       25: 1198-block  0
+function _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5resetEPS7_ called 28 returned 100% blocks executed 25%
+       28: 1197:  void reset(T* p = NULL) {
+       28: 1198:    if (p != ptr_) {
+       28: 1198-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 25
+branch  1 taken 28
     #####: 1199:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
     %%%%%: 1199-block  0
 call    0 never executed
@@ -1271,7 +1271,7 @@ call    3 never executed
     #####: 1202:      ptr_ = p;
     %%%%%: 1202-block  0
         -: 1203:    }
-       25: 1204:  }
+       28: 1204:  }
 ------------------
         -: 1205:
         -: 1206:  friend void swap(scoped_ptr& a, scoped_ptr& b) {

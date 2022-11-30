@@ -535,32 +535,24 @@
         -:  531:			  && _PCCP::template
         -:  532:			   _ImplicitlyMoveConvertiblePair<_U1, _U2>(),
         -:  533:                         bool>::type=true>
-     692*:  534:	constexpr pair(_U1&& __x, _U2&& __y)
-     692*:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+      908:  534:	constexpr pair(_U1&& __x, _U2&& __y)
+      908:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
 ------------------
 _ZNSt4pairIiiEC1IRiiLb1EEEOT_OT0_:
-function _ZNSt4pairIiiEC1IRiiLb1EEEOT_OT0_ called 348 returned 100% blocks executed 100%
-      348:  534:	constexpr pair(_U1&& __x, _U2&& __y)
-      348:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
-      348:  535-block  0
-call    0 returned 348
-call    1 returned 348
+function _ZNSt4pairIiiEC1IRiiLb1EEEOT_OT0_ called 456 returned 100% blocks executed 100%
+      456:  534:	constexpr pair(_U1&& __x, _U2&& __y)
+      456:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+      456:  535-block  0
+call    0 returned 456
+call    1 returned 456
 ------------------
 _ZNSt4pairIiiEC1IiRiLb1EEEOT_OT0_:
-function _ZNSt4pairIiiEC1IiRiLb1EEEOT_OT0_ called 344 returned 100% blocks executed 100%
-      344:  534:	constexpr pair(_U1&& __x, _U2&& __y)
-      344:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
-      344:  535-block  0
-call    0 returned 344
-call    1 returned 344
-------------------
-_ZNSt4pairIiiEC1IRiS2_Lb1EEEOT_OT0_:
-function _ZNSt4pairIiiEC1IRiS2_Lb1EEEOT_OT0_ called 0 returned 0% blocks executed 0%
-    #####:  534:	constexpr pair(_U1&& __x, _U2&& __y)
-    #####:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
-    %%%%%:  535-block  0
-call    0 never executed
-call    1 never executed
+function _ZNSt4pairIiiEC1IiRiLb1EEEOT_OT0_ called 452 returned 100% blocks executed 100%
+      452:  534:	constexpr pair(_U1&& __x, _U2&& __y)
+      452:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+      452:  535-block  0
+call    0 returned 452
+call    1 returned 452
 ------------------
         -:  536:
         -:  537:      template<typename _U1, typename _U2, typename
@@ -777,12 +769,12 @@ branch  3 never executed
         -:  738:  template<typename _T1, typename _T2>
         -:  739:    constexpr pair<typename __decay_and_strip<_T1>::__type,
         -:  740:                   typename __decay_and_strip<_T2>::__type>
-     692*:  741:    make_pair(_T1&& __x, _T2&& __y)
+      908:  741:    make_pair(_T1&& __x, _T2&& __y)
         -:  742:    {
         -:  743:      typedef typename __decay_and_strip<_T1>::__type __ds_type1;
         -:  744:      typedef typename __decay_and_strip<_T2>::__type __ds_type2;
         -:  745:      typedef pair<__ds_type1, __ds_type2> 	      __pair_type;
-     692*:  746:      return __pair_type(std::forward<_T1>(__x), std::forward<_T2>(__y));
+      908:  746:      return __pair_type(std::forward<_T1>(__x), std::forward<_T2>(__y));
         -:  747:    }
         -:  748:#else
         -:  749:  template<typename _T1, typename _T2>

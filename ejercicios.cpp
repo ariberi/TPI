@@ -84,39 +84,43 @@ bool perdio(tablero& t, jugadas& j) {
 /******++++**************************** EJERCICIO gano ***********+++***********************/
 
 /*
- En este ejercicio tenemos una funcion dentro de la principal llamada CasillasVacias(t) que recorre el tablero  entero y devuelve un vector de posiciones, con aquellas que estan vacias.
- En el peor de los casos, el tablero esta lleno de casillas vacias y fueron todas jugadas.
- Se itera sobre la cantidad de posiciones vacias y luego dentro de la funcion posicionJugada(j,p).
- Por lo tanto la complejidad temporal resutante es de orden O(n²).
+ En este ejercicio recorremos el tablero entero fijandose que no exista ninguna posicion vacia sin jugar
+ En el peor de los casos, el tablero esta lleno de casillas vacias y fueron todas jugadas, por lo tanto la complejidad temporal resutante es de orden O(n^3).
+ Si bien en la primera parte de la funcion llama a la funcion perdio, que es de complejidad O(n), al no estar anidado, no aumenta la complejidad total de la funcion gano.
 */
-
 
 bool gano(tablero& t, jugadas& j) {
 
-    vector<pos> posicionesDeCasillasVacias = CasillasVacias(t);
+    int res = true;
 
-    int contador = 0;
-
-    for (int i = 0; i < posicionesDeCasillasVacias.size(); i++){
-        pos p = posicionesDeCasillasVacias[i];
-        if (posicionValida(t,p)){
-            if (posicionJugada(j,p)){
-                contador++;
+    if (perdio(t,j)){
+        res = false;
+    }
+    for (int i = 0; i < t.size(); i++){
+        for (int k = 0; k < t[0].size(); k++){
+            pos p = make_pair(i,k);
+            if (t[i][k] == cVACIA && !posicionJugada(j,p)){
+                    res = false;
             }
         }
     }
-    bool res = (contador == posicionesDeCasillasVacias.size());
     return res;
 }
+
+
+
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
 
 /*
- Esta funcion se fija que la posicion que se le pasa como parametro no este jugada ni tenga una banderita, se le calcula la cantidad de minas adyacentes y se la agrega a la lista de jugadas.
- Luego se fija que sea una posicion vacia y que no tenga minas adyacentes, y si esto es asi, recorre por medio de dos loop for para descubrir todas esas posiciones.
+ Esta funcion se fija que la posicion que se le pasa como parametro no este jugada ni tenga una banderita,
+ se le calcula la cantidad de minas adyacentes y se la agrega a la lista de jugadas.
+ Luego se fija que sea una posicion vacia y que no tenga minas adyacentes, y si esto es asi,
+ recorre por medio de dos loop for para descubrir todas esas posiciones.
  Y asi con todas esas posiciones descubiertas se hace lo mismo llamando otra vez a la funcion, que es entonces recursiva.
  En el peor de los casos, el tablero esta completamente lleno de casillas vacias y todas fueron jugadas.
- Al ser una funcion recursiva no se puede calcular la complejidad temporal, pero sabemos que en el peor de los casos se itera sobre todas las posiciones del tablero.
+ Al ser una funcion recursiva no se puede calcular la complejidad temporal,
+ pero sabemos que en el peor de los casos se itera sobre todas las posiciones del tablero.
  Podemos decir que las condiciones pedidas en la funcion aseguran la terminacion de la misma.
 
 */
@@ -150,13 +154,16 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
 
 /*
- De lo que se encarga la funcion es de buscar una posicion que cumpla con la especificacion pedida.
- Recorre el tablero, y si encuentra una posicion que cumpla que este sin jugar ni tenga banderita y sea adyacente a un patron 121, la envia a lista de jugadas, y luego devuelve la posicion y true.
- En el peor de los casos, el patron 121 se encuentra muy carca del borde inferior derecho del tablero y se tienen que probar practicamente todas las posiciones del tablero para encontrar la posicion.
- Por un lado dos primero dos for anidados que recorren el tablero tienen una complejidad de O(n²).
- Luego, esPosicionSinJugarYSinBanderita tiene una complejidad de O(n²) y esAdyacente121 de O(n^12).
- Por lo tanto la complejidad temporal de la funcion total es de orden O(n^16).
+ La funcion empieza recorriendo el tablero completo, por lo tanto hasta ahi tenemos una complejidad de orden O(n^2) por tener dos ciclos for anidados, donde n es la longitud del tablero
 
+ Siguiendo, la complejidad de la funcion esPosicionSinJugarYSinBanderita es de orden O(j.size())+O(b.size()) que en el peor de los casos,
+ la longitud de las jugadas tiene todas las posiciones del tablero, y lo mismo para con las banderitas, por lo tanto es O(n) + O(n) = O(n).
+ Luego, esAdyacente121 depende tambien de las posiciones de las jugadas que en peor caso son de O(n).
+ Por lo tanto la complejidad entre las dos funciones es de orden O(n), dado que se suman ambas.
+
+ Vale la pena aclarar que las funciones minasAdyacentes() y push_back() tiene complejidad O(1).
+
+ En total, la funcion es de orden O(n^2) * O(n) = O(n^3).
 */
 
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {

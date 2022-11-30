@@ -157,19 +157,19 @@
         -:  153:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  154:      // 3035. std::allocator's constructors should be constexpr
         -:  155:      _GLIBCXX20_CONSTEXPR
-      101:  156:      allocator() _GLIBCXX_NOTHROW { }
+      104:  156:      allocator() _GLIBCXX_NOTHROW { }
 ------------------
 _ZNSaISt4pairIiiEEC1Ev:
-function _ZNSaISt4pairIiiEEC1Ev called 12 returned 100% blocks executed 100%
-       12:  156:      allocator() _GLIBCXX_NOTHROW { }
-       12:  156-block  0
-call    0 returned 12
+function _ZNSaISt4pairIiiEEC1Ev called 13 returned 100% blocks executed 100%
+       13:  156:      allocator() _GLIBCXX_NOTHROW { }
+       13:  156-block  0
+call    0 returned 13
 ------------------
 _ZNSaISt4pairIS_IiiEiEEC1Ev:
-function _ZNSaISt4pairIS_IiiEiEEC1Ev called 20 returned 100% blocks executed 100%
-       20:  156:      allocator() _GLIBCXX_NOTHROW { }
-       20:  156-block  0
-call    0 returned 20
+function _ZNSaISt4pairIS_IiiEiEEC1Ev called 22 returned 100% blocks executed 100%
+       22:  156:      allocator() _GLIBCXX_NOTHROW { }
+       22:  156-block  0
+call    0 returned 22
 ------------------
 _ZNSaISt6vectorIbSaIbEEEC1Ev:
 function _ZNSaISt6vectorIbSaIbEEEC1Ev called 15 returned 100% blocks executed 100%
@@ -185,36 +185,36 @@ call    0 returned 54
 ------------------
         -:  157:
         -:  158:      _GLIBCXX20_CONSTEXPR
-      264:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-      264:  160:      : __allocator_base<_Tp>(__a) { }
+      274:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+      274:  160:      : __allocator_base<_Tp>(__a) { }
 ------------------
 _ZNSaISt4pairIiiEEC1ERKS1_:
-function _ZNSaISt4pairIiiEEC1ERKS1_ called 12 returned 100% blocks executed 100%
-       12:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       12:  160:      : __allocator_base<_Tp>(__a) { }
-       12:  160-block  0
-call    0 returned 12
+function _ZNSaISt4pairIiiEEC1ERKS1_ called 13 returned 100% blocks executed 100%
+       13:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       13:  160:      : __allocator_base<_Tp>(__a) { }
+       13:  160-block  0
+call    0 returned 13
 ------------------
 _ZNSaISt4pairIiiEEC2ERKS1_:
-function _ZNSaISt4pairIiiEEC2ERKS1_ called 12 returned 100% blocks executed 100%
-       12:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       12:  160:      : __allocator_base<_Tp>(__a) { }
-       12:  160-block  0
-call    0 returned 12
+function _ZNSaISt4pairIiiEEC2ERKS1_ called 13 returned 100% blocks executed 100%
+       13:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       13:  160:      : __allocator_base<_Tp>(__a) { }
+       13:  160-block  0
+call    0 returned 13
 ------------------
 _ZNSaISt4pairIS_IiiEiEEC1ERKS2_:
-function _ZNSaISt4pairIS_IiiEiEEC1ERKS2_ called 24 returned 100% blocks executed 100%
-       24:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       24:  160:      : __allocator_base<_Tp>(__a) { }
-       24:  160-block  0
-call    0 returned 24
+function _ZNSaISt4pairIS_IiiEiEEC1ERKS2_ called 28 returned 100% blocks executed 100%
+       28:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       28:  160:      : __allocator_base<_Tp>(__a) { }
+       28:  160-block  0
+call    0 returned 28
 ------------------
 _ZNSaISt4pairIS_IiiEiEEC2ERKS2_:
-function _ZNSaISt4pairIS_IiiEiEEC2ERKS2_ called 24 returned 100% blocks executed 100%
-       24:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       24:  160:      : __allocator_base<_Tp>(__a) { }
-       24:  160-block  0
-call    0 returned 24
+function _ZNSaISt4pairIS_IiiEiEEC2ERKS2_ called 28 returned 100% blocks executed 100%
+       28:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       28:  160:      : __allocator_base<_Tp>(__a) { }
+       28:  160-block  0
+call    0 returned 28
 ------------------
 _ZNSaISt6vectorIbSaIbEEEC1ERKS2_:
 function _ZNSaISt6vectorIbSaIbEEEC1ERKS2_ called 15 returned 100% blocks executed 100%
@@ -270,7 +270,7 @@ call    0 returned 108
         -:  171:#if __cpp_constexpr_dynamic_alloc
         -:  172:      constexpr
         -:  173:#endif
-     474*:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+      496:  174:      ~allocator() _GLIBCXX_NOTHROW { }
 ------------------
 _ZNSaImED1Ev:
 function _ZNSaImED1Ev called 162 returned 100% blocks executed 100%
@@ -285,28 +285,28 @@ function _ZNSaImED2Ev called 78 returned 100% blocks executed 100%
 call    0 returned 78
 ------------------
 _ZNSaISt4pairIiiEED1Ev:
-function _ZNSaISt4pairIiiEED1Ev called 24 returned 100% blocks executed 100%
-       24:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       24:  174-block  0
-call    0 returned 24
+function _ZNSaISt4pairIiiEED1Ev called 26 returned 100% blocks executed 100%
+       26:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       26:  174-block  0
+call    0 returned 26
 ------------------
 _ZNSaISt4pairIiiEED2Ev:
-function _ZNSaISt4pairIiiEED2Ev called 0 returned 0% blocks executed 0%
-    #####:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-    %%%%%:  174-block  0
-call    0 never executed
+function _ZNSaISt4pairIiiEED2Ev called 12 returned 100% blocks executed 100%
+       12:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       12:  174-block  0
+call    0 returned 12
 ------------------
 _ZNSaISt4pairIS_IiiEiEED1Ev:
-function _ZNSaISt4pairIS_IiiEiEED1Ev called 44 returned 100% blocks executed 100%
-       44:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       44:  174-block  0
-call    0 returned 44
+function _ZNSaISt4pairIS_IiiEiEED1Ev called 50 returned 100% blocks executed 100%
+       50:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       50:  174-block  0
+call    0 returned 50
 ------------------
 _ZNSaISt4pairIS_IiiEiEED2Ev:
-function _ZNSaISt4pairIS_IiiEiEED2Ev called 19 returned 100% blocks executed 100%
-       19:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       19:  174-block  0
-call    0 returned 19
+function _ZNSaISt4pairIS_IiiEiEED2Ev called 21 returned 100% blocks executed 100%
+       21:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       21:  174-block  0
+call    0 returned 21
 ------------------
 _ZNSaISt6vectorIbSaIbEEED1Ev:
 function _ZNSaISt6vectorIbSaIbEEED1Ev called 30 returned 100% blocks executed 100%

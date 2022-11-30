@@ -231,20 +231,20 @@
         -:  227:  template<typename _Tp>
         -:  228:    _GLIBCXX14_CONSTEXPR
         -:  229:    inline const _Tp&
-function _ZSt3minIyERKT_S2_S2_ called 199 returned 100% blocks executed 75%
-      199:  230:    min(const _Tp& __a, const _Tp& __b)
+function _ZSt3minIyERKT_S2_S2_ called 170 returned 100% blocks executed 75%
+      170:  230:    min(const _Tp& __a, const _Tp& __b)
         -:  231:    {
         -:  232:      // concept requirements
         -:  233:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  234:      //return __b < __a ? __b : __a;
-      199:  235:      if (__b < __a)
-      199:  235-block  0
+      170:  235:      if (__b < __a)
+      170:  235-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 199
+branch  1 taken 170
     #####:  236:	return __b;
     %%%%%:  236-block  0
-      199:  237:      return __a;
-      199:  237-block  0
+      170:  237:      return __a;
+      170:  237-block  0
         -:  238:    }
         -:  239:
         -:  240:  /**
@@ -261,20 +261,20 @@ branch  1 taken 199
         -:  251:  template<typename _Tp>
         -:  252:    _GLIBCXX14_CONSTEXPR
         -:  253:    inline const _Tp&
-function _ZSt3maxIyERKT_S2_S2_ called 76 returned 100% blocks executed 100%
-       76:  254:    max(const _Tp& __a, const _Tp& __b)
+function _ZSt3maxIyERKT_S2_S2_ called 60 returned 100% blocks executed 100%
+       60:  254:    max(const _Tp& __a, const _Tp& __b)
         -:  255:    {
         -:  256:      // concept requirements
         -:  257:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  258:      //return  __a < __b ? __b : __a;
-       76:  259:      if (__a < __b)
-       76:  259-block  0
-branch  0 taken 19 (fallthrough)
-branch  1 taken 57
-       19:  260:	return __b;
-       19:  260-block  0
-       57:  261:      return __a;
-       57:  261-block  0
+       60:  259:      if (__a < __b)
+       60:  259-block  0
+branch  0 taken 16 (fallthrough)
+branch  1 taken 44
+       16:  260:	return __b;
+       16:  260-block  0
+       44:  261:      return __a;
+       44:  261-block  0
         -:  262:    }
         -:  263:
         -:  264:  /**
@@ -326,9 +326,9 @@ branch  1 taken 57
         -:  310:  template<typename _Iterator>
         -:  311:    _GLIBCXX20_CONSTEXPR
         -:  312:    inline _Iterator
-      144:  313:    __niter_base(_Iterator __it)
+       36:  313:    __niter_base(_Iterator __it)
         -:  314:    _GLIBCXX_NOEXCEPT_IF(std::is_nothrow_copy_constructible<_Iterator>::value)
-      144:  315:    { return __it; }
+       36:  315:    { return __it; }
 ------------------
 _ZSt12__niter_baseIPSt4pairIS0_IiiEiEET_S4_:
 function _ZSt12__niter_baseIPSt4pairIS0_IiiEiEET_S4_ called 30 returned 100% blocks executed 100%
@@ -338,11 +338,11 @@ function _ZSt12__niter_baseIPSt4pairIS0_IiiEiEET_S4_ called 30 returned 100% blo
        30:  315-block  0
 ------------------
 _ZSt12__niter_baseIPSt4pairIiiEET_S3_:
-function _ZSt12__niter_baseIPSt4pairIiiEET_S3_ called 114 returned 100% blocks executed 100%
-      114:  313:    __niter_base(_Iterator __it)
+function _ZSt12__niter_baseIPSt4pairIiiEET_S3_ called 6 returned 100% blocks executed 100%
+        6:  313:    __niter_base(_Iterator __it)
         -:  314:    _GLIBCXX_NOEXCEPT_IF(std::is_nothrow_copy_constructible<_Iterator>::value)
-      114:  315:    { return __it; }
-      114:  315-block  0
+        6:  315:    { return __it; }
+        6:  315-block  0
 ------------------
         -:  316:
         -:  317:  template<typename _Ite, typename _Seq>

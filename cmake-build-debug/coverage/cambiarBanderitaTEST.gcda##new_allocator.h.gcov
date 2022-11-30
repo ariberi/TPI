@@ -81,19 +81,19 @@
         -:   77:#endif
         -:   78:
         -:   79:      _GLIBCXX20_CONSTEXPR
-     253*:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+     268*:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorImEC2Ev:
 function _ZNSt15__new_allocatorImEC2Ev called 108 returned 100% blocks executed 100%
       108:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIiiEEC2Ev:
-function _ZNSt15__new_allocatorISt4pairIiiEEC2Ev called 0 returned 0% blocks executed 0%
-    #####:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIiiEEC2Ev called 13 returned 100% blocks executed 100%
+       13:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2Ev:
-function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2Ev called 22 returned 100% blocks executed 100%
-       22:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2Ev called 24 returned 100% blocks executed 100%
+       24:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt6vectorIbSaIbEEEC2Ev:
 function _ZNSt15__new_allocatorISt6vectorIbSaIbEEEC2Ev called 15 returned 100% blocks executed 100%
@@ -109,15 +109,15 @@ function _ZNSt15__new_allocatorIcEC2Ev called 0 returned 0% blocks executed 0%
 ------------------
         -:   81:
         -:   82:      _GLIBCXX20_CONSTEXPR
-     264*:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+     274*:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIiiEEC2ERKS2_:
-function _ZNSt15__new_allocatorISt4pairIiiEEC2ERKS2_ called 24 returned 100% blocks executed 100%
-       24:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIiiEEC2ERKS2_ called 26 returned 100% blocks executed 100%
+       26:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2ERKS3_:
-function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2ERKS3_ called 48 returned 100% blocks executed 100%
-       48:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2ERKS3_ called 56 returned 100% blocks executed 100%
+       56:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt6vectorIbSaIbEEEC2ERKS3_:
 function _ZNSt15__new_allocatorISt6vectorIbSaIbEEEC2ERKS3_ called 30 returned 100% blocks executed 100%
@@ -137,19 +137,19 @@ function _ZNSt15__new_allocatorIcEC2ERKS0_ called 0 returned 0% blocks executed 
         -:   87:	__new_allocator(const __new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
         -:   88:
         -:   89:#if __cplusplus <= 201703L
-     450*:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+     496*:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorImED2Ev:
 function _ZNSt15__new_allocatorImED2Ev called 240 returned 100% blocks executed 100%
       240:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIiiEED2Ev:
-function _ZNSt15__new_allocatorISt4pairIiiEED2Ev called 0 returned 0% blocks executed 0%
-    #####:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIiiEED2Ev called 38 returned 100% blocks executed 100%
+       38:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIS0_IiiEiEED2Ev:
-function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEED2Ev called 63 returned 100% blocks executed 100%
-       63:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEED2Ev called 71 returned 100% blocks executed 100%
+       71:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt6vectorIbSaIbEEED2Ev:
 function _ZNSt15__new_allocatorISt6vectorIbSaIbEEED2Ev called 39 returned 100% blocks executed 100%
