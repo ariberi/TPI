@@ -1,6 +1,8 @@
 # BUSCAMINAS
 
-# Tests
+Tests para probar tableros para saber si se puede ganar o no un juego de buscaminas
+
+## Tests
 
 Para correr los tests vamos a usar el framework Google Test.
 
